@@ -1,0 +1,152 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "650e9bed-3833-4f66-90c4-a6f8b4ed5e1d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 60.96 29.21)
+		(size 34.29 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "69ba1581-a434-43cf-ae3f-753701ead741")
+		(property "Sheetname" "MCU"
+			(at 60.96 28.4984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 60.96 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNC_MPG"
+				(path "/650e9bed-3833-4f66-90c4-a6f8b4ed5e1d"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 99.06 29.21)
+		(size 33.02 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "89a3b31b-d5fa-49e2-809f-fc28919a13c4")
+		(property "Sheetname" "Connector"
+			(at 99.06 28.4984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Connector.kicad_sch"
+			(at 99.06 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNC_MPG"
+				(path "/650e9bed-3833-4f66-90c4-a6f8b4ed5e1d"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 22.86 29.21)
+		(size 34.29 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "90a04cb0-b9b3-49b5-a902-f421764c41e3")
+		(property "Sheetname" "Monoflip"
+			(at 22.86 28.4984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Monoflip.kicad_sch"
+			(at 22.86 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "CNC_MPG"
+				(path "/650e9bed-3833-4f66-90c4-a6f8b4ed5e1d"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "MainboardMPG")
+		)
+	)
+	(embedded_fonts no)
+)
