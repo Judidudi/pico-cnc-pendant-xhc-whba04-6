@@ -1,0 +1,19 @@
+// Generated from cmake/version.h.in - do not edit.
+//
+// The version has exactly one source: project(... VERSION ...) in
+// CMakeLists.txt. Anything that needs it includes this header, so a release
+// is a one-line change and the number can never disagree with itself.
+#ifndef VERSION_H
+#define VERSION_H
+
+// The public project name is spelled with a hyphen; the CMake project and
+// target use an underscore because that is what the build artefacts are
+// named after. Only the version is derived, and it has one source.
+#define CNC_PENDANT_NAME    "cnc-pendant"
+#define CNC_PENDANT_VERSION "@PROJECT_VERSION@"
+
+// Ready to display: the user interface and the UART banner both show a
+// leading "v".
+#define CNC_PENDANT_VERSION_STR "v" CNC_PENDANT_VERSION
+
+#endif // VERSION_H
