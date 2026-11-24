@@ -3,7 +3,7 @@
 This repository contains the software and hardware for a complete CNC pendant that emulates the USB protocol of the original XHC WHB04B-6 pendant. It is designed to work with LinuxCNC, Beamicon2, Mach3 and Mach4 without any driver changes.
 
 <p align="center">
-  <img src="docs/images/pendant.jpg" alt="CNC pendant" width="600">
+  <img src="docs/pendant.jpg" alt="CNC pendant" width="600">
 </p>
 
 ## Features
