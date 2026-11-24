@@ -1,17 +1,10 @@
-# Universal_CNC_Pendant_XHC-WHB04
-This Repository contains Software and Hardware for a complete CNC-Pendant which emulates the protocol of the original XHC-WHB04 Pendant. This Pendant works out of the Box with Linux-CNC, Beacon, Mach3 and Mach4.
+# Universal CNC Pendant (XHC WHB04B-6 compatible)
 
-
-<!-- Logo: replace with your final mark -->
-<p align="center">
-  <img src="docs/images/logo.svg" alt="gleeworks" width="120">
-</p>
+This repository contains the software and hardware for a complete CNC pendant that emulates the USB protocol of the original XHC WHB04B-6 pendant. It is designed to work with LinuxCNC, Beamicon2, Mach3 and Mach4 without any driver changes.
 
 <p align="center">
-  <img src="docs/images/explosion.gif" alt="Exploded view of the pendant" width="700">
+  <img src="docs/images/pendant.jpg" alt="CNC pendant" width="600">
 </p>
-
----
 
 ## Features
 
@@ -28,73 +21,44 @@ This Repository contains Software and Hardware for a complete CNC-Pendant which 
 |------------|--------|
 | LinuxCNC   | To be tested |
 | Beamicon2  | WIP |
-| Mach 3     | WIP |
-| Mach 4.    | WIP |
+| Mach3      | WIP |
+| Mach4      | WIP |
 
 ## Repository structure
 
 ```
-firmware/     Pico 2 W firmware (C, Pico SDK, TinyUSB, LVGL)
+firmware/        Pico 2 W firmware (C, Pico SDK, TinyUSB, LVGL)
 hardware/
-  ├─ pcb/         KiCad projects (main board, E-stop breakout)
-  ├─ enclosure/   → printable parts are hosted on Printables (see below)
-  └─ bom/         Bill of materials
-docs/         Assembly guide, wiring, images
+  ├─ pcb/        KiCad projects (work in progress)
+  ├─ enclosure/  Link to the printable parts on Printables
+  └─ bom/        Bill of materials
+docs/            Assembly guide, wiring, images
 ```
 
-### Enclosure
+## Quickstart
 
-All printable parts (3MF/STL) are available on **[Printables](https://www.printables.com/)** <!-- TODO: link -->.
-Check [`hardware/enclosure/README.md`](hardware/enclosure/README.md) for which enclosure version matches which PCB revision.
-
-## Getting started
-
-### 1. Clone
-
-LVGL is included as a Git submodule, so clone recursively:
-
-```bash
-git clone --recursive https://github.com/gleeworks/cnc-pendant.git
-```
-
-Already cloned without `--recursive`? Run:
-
-```bash
-git submodule update --init
-```
-
-### 2. Build the firmware
-
-Requires the [Raspberry Pi Pico SDK](https://github.com/raspberrypi/pico-sdk) with `PICO_SDK_PATH` set
-(or the Raspberry Pi Pico extension for VS Code).
-
-```bash
-cd firmware
-mkdir build && cd build
-cmake -DPICO_BOARD=pico2_w ..
-make
-```
-
-### 3. Flash
-
-Hold **BOOTSEL** while plugging in the Pico, then copy the generated `.uf2` file to the `RP2350` drive.
-Prebuilt `.uf2` files are attached to each [release](../../releases).
-
-### 4. Set up LinuxCNC
-
-See [`docs/linuxcnc-setup.md`](docs/linuxcnc-setup.md). <!-- TODO -->
-
-## Building your own
-
-The step-by-step guide is in [`docs/assembly-guide.md`](docs/assembly-guide.md). <!-- TODO -->
+1. Download the latest `.uf2` file from the [Releases](../../releases) page.
+2. Hold the **BOOTSEL** button on the Pico while plugging in the USB cable. The Pico shows up as a USB drive.
+3. Copy the `.uf2` file onto the drive. The Pico restarts automatically and the pendant is ready to use.
 
 ## Safety
 
-- The **RESET** key toggles machine on/off – it is **not** an emergency stop.
+- The **RESET** key toggles the machine on/off – it is **not** an emergency stop.
 - The pendant's E-stop only protects you if it is wired into your machine's **hardware safety chain**. Never rely on a software-only E-stop.
 - This is a hobby project. Build and use it at your own risk.
 
-## Third-party License
+## To do
+
+- Test and optimize the default button layout and add symbols to the keycaps
+- Test with Beamicon2, Mach3 and Mach4
+- Finish the hardware watchdog
+- Design a custom PCB with an integrated RP2350 and all peripherals
+
+## License
+
+The original work in this repository is licensed under **TODO**, see [LICENSE](LICENSE).
+
+Third-party components keep their own licenses:
 
 | Component | License |
 |-----------|---------|
